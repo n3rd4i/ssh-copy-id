@@ -20,13 +20,7 @@ IF NOT "%1"=="" (
     GOTO :loop
 )
 
-set linux_cmd="umask 077; test -d .ssh || mkdir .ssh ; cat >> .ssh/authorized_keys"
-type %identity_file% | ssh %machine% %linux_cmd%
-
-REM Source: https://linux.die.net/man/1/ssh-copy-id
-REM set src_pub_key=%userprofile%\.ssh\id_rsa.pub
-REM set machine=android
-REM set linux_cmd="umask 077; test -d .ssh || mkdir .ssh ; cat >> .ssh/authorized_keys"
-REM type %src_pub_key% | ssh %machine% %linux_cmd%
+SET linux_cmd="umask 077; test -d .ssh || mkdir .ssh ; cat >> .ssh/authorized_keys"
+TYPE %identity_file% | ssh %machine% %linux_cmd%
 
 :theend

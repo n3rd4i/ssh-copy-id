@@ -1,13 +1,5 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = ''
-$packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
-  url           = $url
-  softwareName  = 'ssh-copy-id*'
-  checksum      = ''
-  checksumType  = 'sha256'
-}
-Install-ChocolateyPackage @packageArgs
+
+Install-BinFile -Name ssh-copy-id -Path "$(Join-Path $toolsDir 'ssh-copy-id.cmd')"
