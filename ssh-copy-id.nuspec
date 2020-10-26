@@ -18,7 +18,7 @@
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>ssh-copy-id (Install)</title>
+    <title>ssh-copy-id</title>
     <authors>n3rd4i</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://github.com/n3rd4i/ssh-copy-id</projectUrl>
