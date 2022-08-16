@@ -10,7 +10,7 @@ SET identity_file=%userprofile%\.ssh\id_rsa.pub
 :loop
 IF NOT "%1"=="" (
     IF "%1"=="-i" (
-        SET i_file=%2
+        SET identity_file=%2
         SHIFT
     )
     SHIFT
